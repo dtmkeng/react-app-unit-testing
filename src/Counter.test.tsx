@@ -1,6 +1,16 @@
 import { cleanup, fireEvent, render, screen } from "@testing-library/react";
 import Counter from "./Counter";
 afterEach(cleanup);
+// Mock other Componets
+jest.mock("./Tab.tsx", () => {
+  return {
+    __esModule: true,
+    default: () => {
+      return <div></div>;
+    },
+  };
+});
+
 describe("Couter", () => {
   it("should render plus button", () => {
     render(<Counter inital={0} />);
