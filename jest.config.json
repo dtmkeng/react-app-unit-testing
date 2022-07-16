@@ -1,0 +1,15 @@
+{
+    "transform": {
+        "^.+\\.[t|j]sx?$": "babel-jest"
+    },
+    "moduleNameMapper": {
+        "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    },
+    "setupFilesAfterEnv": ["<rootDir>/jest-setup.js"],
+    "moduleDirectories": ["node_modules", "src"],
+    "testEnvironmentOptions": {
+        "injectEthersProvider": true
+    },
+    "testTimeout": 10000,
+    "testEnvironment": "jsdom"
+}
