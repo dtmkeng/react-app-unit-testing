@@ -12,6 +12,9 @@ const Home = () => {
 const About = () => {
   return <div>About</div>;
 };
+const NotMatch = () => {
+  return <div>Not match route.</div>;
+};
 function App() {
   return (
     <div className="App">
@@ -19,6 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
+        <Route path="*" element={<NotMatch />} />
       </Routes>
     </div>
   );
