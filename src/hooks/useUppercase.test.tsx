@@ -1,5 +1,5 @@
 import { act, renderHook } from "@testing-library/react-hooks";
-import { useUppercase } from "./useUpperCase";
+import { useUppercase } from "./useUppercase";
 
 describe("UseUppercase", () => {
   it("returns current initial value, uppercased", () => {
