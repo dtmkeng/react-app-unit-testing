@@ -6,6 +6,7 @@
             "@apis/*": ["apis/*"],
             "@hooks/*": ["hooks/*"],
             "@hocs/*": ["hocs/*"],
+            "@contexts/*": ["contexts/*"],
         }
     }
 }
