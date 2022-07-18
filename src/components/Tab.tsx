@@ -1,6 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-const Tab: React.FC = () => {
+type Props = {
+  open: boolean;
+};
+const Tab: React.FC<Props> = ({ open }) => {
   const navigate = useNavigate();
   const goTo = (url: string) => {
     navigate(url);

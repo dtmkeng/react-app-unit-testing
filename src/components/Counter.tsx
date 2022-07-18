@@ -12,7 +12,7 @@ const Counter: React.FC<Props> = ({ inital }) => {
       <div onClick={() => setValue(value + 1)}>+</div>
       <div>{value}</div>
       <div onClick={() => setValue(value - 1)}>-</div>
-      <Tab />
+      <Tab open={true} />
     </>
   );
 };

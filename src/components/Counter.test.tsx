@@ -2,10 +2,12 @@ import { cleanup, fireEvent, render, screen } from "@testing-library/react";
 import Counter from "./Counter";
 afterEach(cleanup);
 // Mock other Componets
+const mockChildComponent = jest.fn();
 jest.mock("./Tab.tsx", () => {
   return {
     __esModule: true,
-    default: () => {
+    default: (props: any) => {
+      mockChildComponent(props);
       return <div></div>;
     },
   };
@@ -14,6 +16,11 @@ jest.mock("./Tab.tsx", () => {
 describe("Couter", () => {
   it("should render plus button", () => {
     render(<Counter inital={0} />);
+    expect(mockChildComponent).toHaveBeenCalledWith(
+      expect.objectContaining({
+        open: true,
+      })
+    );
     expect(screen.getByText("+")).toBeTruthy();
   });
 
