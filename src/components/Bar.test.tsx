@@ -16,7 +16,7 @@ afterEach(cleanup);
 describe("Bar", () => {
   it("should set value when state change", () => {
     const setValue = jest.fn();
-    React.useState = jest.fn().mockReturnValue(["keng", jest.fn()]);
+    React.useState = jest.fn(() => ["keng", jest.fn()]);
     // .mockReturnValueOnce(["5ft", () => console.log("setHeight")]);
 
     render(<Bar setValue={setValue} />);
