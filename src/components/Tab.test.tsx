@@ -11,7 +11,7 @@ jest.mock("react-router-dom", () => ({
 
 describe("Tab", () => {
   it("should go to tab a when click tab a", () => {
-    render(<Tab />);
+    render(<Tab open={true} />);
 
     expect(screen.getByText(/Tab A/i)).toBeTruthy();
 
@@ -21,7 +21,7 @@ describe("Tab", () => {
   });
 
   it("should go to tab B when click tab B", () => {
-    render(<Tab />);
+    render(<Tab open={true} />);
 
     expect(screen.getByText(/Tab B/i)).toBeTruthy();
 
